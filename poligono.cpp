@@ -37,12 +37,6 @@ void Poligono::inserirVertices(){
     //cout << "\tV0(" << p[n].getX() << ", " << p[n].getY() << ")!!!" << endl;
 }
 
-void Poligono::print (){
-    cout << endl;
-    for(int i=0; i<n+1; i++){
-        cout << "\tV" << i << "(" << p[i].getX() << ", " << p[i].getY() << ")" << endl;
-    }
-}
 
 int Poligono::recupera (void){
     int a;
@@ -110,4 +104,12 @@ void Poligono::rotaciona(void){
     p[n].setX(p[0].getX());
     p[n].setY(p[0].getY());
 
+}
+
+void Poligono::imprime (){
+    cout << endl;
+    for(int i=0; i<n; i++){
+        cout << " V" << i << "(" << p[i].getX() << ", " << p[i].getY() << ")->";
+    }
+    cout << " V0(" << p[n].getX() << ", " << p[n].getY() << ")" << endl;
 }

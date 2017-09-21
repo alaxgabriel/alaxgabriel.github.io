@@ -9,11 +9,11 @@ private:
 public:
     void inicia(void);
     void inserirVertices(void);
-    void print(void);
     int recupera(void);
     float area(void);
     void translada(float a, float b);
     void rotaciona(void);
+    void imprime(void);
 };
 
 
