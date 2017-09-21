@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1506029370 source:c:\users\alax\desktop\poligono\main.cpp
+	<iostream>
+	"poligono.h"
+	"point.h"
+
+1506019555 source:c:\users\alax\desktop\poligono\point.cpp
+	"point.h"
+	<iostream>
+	<cmath>
+
+1506019555 c:\users\alax\desktop\poligono\point.h
+
+1506029270 source:c:\users\alax\desktop\poligono\poligono.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"poligono.h"
+	"point.h"
+
+1506029191 c:\users\alax\desktop\poligono\poligono.h
+	"point.h"
+
