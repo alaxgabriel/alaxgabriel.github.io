@@ -9,6 +9,26 @@
 
 using namespace std;
 
+Poligono::Poligono(float x, float y, float largura, float altura){
+
+    p[0].setX(x+largura);
+    p[0].setY(y);
+
+    p[1].setX(x);
+    p[1].setY(y-altura);
+
+    p[2].setX(x+largura);
+    p[2].setY(y-altura);
+
+    p[3].setX(x);
+    p[3].setY(y);
+
+    p[4].setX(x+largura);
+    p[4].setY(y);
+
+    n = 4;
+}
+
 void Poligono::inicia (){
     int nv;
     cout << "\n Digite o numero de vertices do poligono: ";
@@ -53,12 +73,16 @@ float Poligono::area(void){
     for(int i=0; i<n; i++){
         tmp = 0;
         tmp = p[i].getX()*p[i+1].getY();
-        //cout << "tmpA" << i << " = " << tmpA << endl;
+        //cout << "tmpA" << i << " = " << tmp << endl;
         a = a + tmp;
         tmp = 0;
         tmp = p[i].getY()*p[i+1].getX();
-        //cout << "tmpB" << i << " = " << tmpB << endl;
+        //cout << "tmpB" << i << " = " << tmp << endl;
         b = b + tmp;
+    }
+
+    if(a<0||b<0){
+        a = a * -1;
     }
     //cout << "\n a = " << a << "\n b = " << b << endl;
     if(a > b){

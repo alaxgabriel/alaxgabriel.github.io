@@ -5,8 +5,9 @@
 class Poligono{
 private:
     int n;
-    Point p[100];
+    Point p[101];
 public:
+    Poligono(float x, float y, float largura, float altura);
     void inicia(void);
     void inserirVertices(void);
     int recupera(void);
