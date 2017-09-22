@@ -14,10 +14,10 @@ Poligono::Poligono(float x, float y, float largura, float altura){
     p[0].setX(x+largura);
     p[0].setY(y);
 
-    p[1].setX(x);
+    p[1].setX(x+largura);
     p[1].setY(y-altura);
 
-    p[2].setX(x+largura);
+    p[2].setX(x);
     p[2].setY(y-altura);
 
     p[3].setX(x);
@@ -73,18 +73,18 @@ float Poligono::area(void){
     for(int i=0; i<n; i++){
         tmp = 0;
         tmp = p[i].getX()*p[i+1].getY();
-        //cout << "tmpA" << i << " = " << tmp << endl;
+        cout << "tmpA" << i << " = " << tmp;
         a = a + tmp;
         tmp = 0;
         tmp = p[i].getY()*p[i+1].getX();
-        //cout << "tmpB" << i << " = " << tmp << endl;
+        cout << "\ttmpB" << i << " = " << tmp << endl;
         b = b + tmp;
     }
 
-    if(a<0||b<0){
-        a = a * -1;
+    if(b<0){
+        b = b * -1;
     }
-    //cout << "\n a = " << a << "\n b = " << b << endl;
+    cout << "\n a = " << a << "\t b = " << b << endl;
     if(a > b){
         area = (a - b)/2;
     }

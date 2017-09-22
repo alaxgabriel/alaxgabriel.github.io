@@ -18,6 +18,10 @@ int main()
     //pol.rotaciona();
     //pol.imprime();
     Retangulo ret(0, 0, 4, 3);
+    //Retangulo ret(0, 0, 5, 5);
+    ret.imprime();
+    ret.area();
+    ret.translada(-3, 4);
     ret.imprime();
     ret.area();
     return 0;
