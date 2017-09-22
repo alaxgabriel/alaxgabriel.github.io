@@ -20,9 +20,27 @@ int main()
     Retangulo ret(0, 0, 4, 3);
     //Retangulo ret(0, 0, 5, 5);
     ret.imprime();
-    ret.area();
+    float a1;
+    float a2;
+    float a3;
+    a1 = ret.area();
     ret.translada(-3, 4);
     ret.imprime();
-    ret.area();
+    a2 = ret.area();
+    if(a1 == a2){
+        cout << "\n Area permaneceu a mesma apos o translado!" << endl;
+    }
+    else{
+        cout << "\n Algo deu errado! A area do retangulo mudou apos o translado!!" << endl;
+    }
+    ret.rotaciona();
+    ret.imprime();
+    a3 = ret.area();
+    if(a1 == a3){
+        cout << "\n Area permaneceu a mesma apos a rotacao!" << endl;
+    }
+    else{
+        cout << "\n Algo deu errado! A area do retangulo mudou apos a rotacao!!" << endl;
+    }
     return 0;
 }

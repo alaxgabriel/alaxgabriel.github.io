@@ -6,6 +6,7 @@
 
 
 #define PI 3.14159265
+#define ang 30
 
 using namespace std;
 
@@ -28,6 +29,7 @@ Poligono::Poligono(float x, float y, float largura, float altura){
 
     n = 4;
 }
+
 
 void Poligono::inicia (){
     int nv;
@@ -105,12 +107,12 @@ void Poligono::translada(float a, float b){
 }
 
 void Poligono::rotaciona(void){
-    Point pr;
-    float ang;
-    float a;
-    float b;
+    //Point pr;
+    //float ang;
+    //float a;
+    //float b;
     float r;
-    cout << "\n Informe o ponto de rotacao para o poligono: ";
+    /*cout << "\n Informe o ponto de rotacao para o poligono: ";
     cin >> a >> b;
     pr.setXY(a, b);
     cout << "\n Informe o angulo da rotacao: ";
@@ -118,10 +120,10 @@ void Poligono::rotaciona(void){
     while(ang < 0 || ang > 360){
         cout << "\n O angulo deve ser entre 0 e 360 graus!! \n\n Informe o angulo de rotacao: ";
         cin >> ang;
-    }
+    }*/
 
     for(int i=0; i<n; i++){
-        r = sqrt( ( pow( ( p[i].getX() - pr.getX() ), 2) ) + ( pow( ( p[i].getY() - pr.getY() ), 2) ) );
+        r = sqrt( ( pow( ( p[i].getX() - p[i].getX()/2 ), 2) ) + ( pow( ( p[i].getY() - p[i].getY()/2 ), 2) ) );
         p[i].setX(r*cos(ang*PI/180));
         p[i].setY(r*sin(ang*PI/180));
     }
