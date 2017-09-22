@@ -7,25 +7,28 @@ using namespace std;
 
 int main()
 {
-    //Poligono pol;
-    //pol.inicia();
-    //pol.inserirVertices();
-    //pol.imprime();
+    Point pRot;
+    pRot.setXY(0,0);
+    Poligono pol;
+    pol.inicia();
+    pol.inserirVertices();
+    pol.imprime();
     //pol.recupera();
-    //pol.area();
+    pol.area();
     //pol.translada(1,1);
     //pol.print();
-    //pol.rotaciona();
-    //pol.imprime();
-    Retangulo ret(0, 0, 4, 3);
+    pol.rotaciona(30, pRot);
+    pol.imprime();
+    pol.area();
+    /*Retangulo ret(0, 0, 4, 3);
     //Retangulo ret(0, 0, 5, 5);
     ret.imprime();
     float a1;
     float a2;
     float a3;
     a1 = ret.area();
-    ret.translada(-3, 4);
-    ret.imprime();
+    //ret.translada(-3, 4);
+    //ret.imprime();
     a2 = ret.area();
     if(a1 == a2){
         cout << "\n Area permaneceu a mesma apos o translado!" << endl;
@@ -41,6 +44,6 @@ int main()
     }
     else{
         cout << "\n Algo deu errado! A area do retangulo mudou apos a rotacao!!" << endl;
-    }
+    }*/
     return 0;
 }

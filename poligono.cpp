@@ -6,11 +6,11 @@
 
 
 #define PI 3.14159265
-#define ang 30
+
 
 using namespace std;
 
-Poligono::Poligono(float x, float y, float largura, float altura){
+/*Poligono::Poligono(float x, float y, float largura, float altura){
 
     p[0].setX(x+largura);
     p[0].setY(y);
@@ -28,7 +28,7 @@ Poligono::Poligono(float x, float y, float largura, float altura){
     p[4].setY(y);
 
     n = 4;
-}
+}*/
 
 
 void Poligono::inicia (){
@@ -75,18 +75,18 @@ float Poligono::area(void){
     for(int i=0; i<n; i++){
         tmp = 0;
         tmp = p[i].getX()*p[i+1].getY();
-        cout << "tmpA" << i << " = " << tmp;
+        //cout << "tmpA" << i << " = " << tmp;
         a = a + tmp;
         tmp = 0;
         tmp = p[i].getY()*p[i+1].getX();
-        cout << "\ttmpB" << i << " = " << tmp << endl;
+        //cout << "\ttmpB" << i << " = " << tmp << endl;
         b = b + tmp;
     }
 
     if(b<0){
         b = b * -1;
     }
-    cout << "\n a = " << a << "\t b = " << b << endl;
+    //cout << "\n a = " << a << "\t b = " << b << endl;
     if(a > b){
         area = (a - b)/2;
     }
@@ -98,6 +98,7 @@ float Poligono::area(void){
 }
 
 void Poligono::translada(float a, float b){
+    cout << "\n\n Translacao:\n";
     for(int i=0; i<n; i++){
         p[i].setX(p[i].getX()+a);
         p[i].setY(p[i].getY()+b);
@@ -106,26 +107,28 @@ void Poligono::translada(float a, float b){
     p[n].setY(p[n].getY() + b);
 }
 
-void Poligono::rotaciona(void){
-    //Point pr;
-    //float ang;
-    //float a;
-    //float b;
-    float r;
-    /*cout << "\n Informe o ponto de rotacao para o poligono: ";
+void Poligono::rotaciona(float ang, Point pRot){
+    /*float a;
+    float b;
+    //float r;
+    cout << "\n Informe o ponto de rotacao para o poligono: ";
     cin >> a >> b;
-    pr.setXY(a, b);
+    pRot.setXY(a, b);
     cout << "\n Informe o angulo da rotacao: ";
     cin >> ang;
     while(ang < 0 || ang > 360){
         cout << "\n O angulo deve ser entre 0 e 360 graus!! \n\n Informe o angulo de rotacao: ";
         cin >> ang;
     }*/
-
+    cout << "\n\n Rotacao:\n";
     for(int i=0; i<n; i++){
-        r = sqrt( ( pow( ( p[i].getX() - p[i].getX()/2 ), 2) ) + ( pow( ( p[i].getY() - p[i].getY()/2 ), 2) ) );
-        p[i].setX(r*cos(ang*PI/180));
-        p[i].setY(r*sin(ang*PI/180));
+        //r = sqrt( ( pow( ( p[i].getX() - p[i].getX() ), 2) ) + ( pow( ( p[i].getY() - p[i].getY()/2 ), 2) ) );
+        float x;
+        float y;
+        x = p[i].getX();
+        y = p[i].getY();
+        p[i].setX( ((x - pRot.getX()) *cos(ang*PI/180)) - ((y - pRot.getY()) *sin(ang*PI/180)));
+        p[i].setY( ((x - pRot.getX()) *sin(ang*PI/180)) + ((y - pRot.getY()) *cos(ang*PI/180)));
     }
     p[n].setX(p[0].getX());
     p[n].setY(p[0].getY());

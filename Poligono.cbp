@@ -37,6 +37,8 @@
 		<Unit filename="point.h" />
 		<Unit filename="poligono.cpp" />
 		<Unit filename="poligono.h" />
+		<Unit filename="retangulo.cpp" />
+		<Unit filename="retangulo.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

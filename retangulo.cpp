@@ -6,9 +6,9 @@
 
 using namespace std;
 
-Retangulo::Retangulo(float x, float y, float largura, float altura) : Poligono(x, y, largura, altura){
+/*Retangulo::Retangulo(float x, float y, float largura, float altura) : Poligono(x, y, largura, altura){
 
 }
 
-Retangulo::~Retangulo(){};
+Retangulo::~Retangulo(){};*/
 

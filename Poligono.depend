@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1506045253 source:c:\users\alax\desktop\poligono\main.cpp
+1506116858 source:c:\users\alax\desktop\poligono\main.cpp
 	<iostream>
 	"poligono.h"
 	"point.h"
@@ -12,21 +12,21 @@
 
 1506019555 c:\users\alax\desktop\poligono\point.h
 
-1506045425 source:c:\users\alax\desktop\poligono\poligono.cpp
+1506111497 source:c:\users\alax\desktop\poligono\poligono.cpp
 	<iostream>
 	<cstdlib>
 	<cmath>
 	"poligono.h"
 	"point.h"
 
-1506040135 c:\users\alax\desktop\poligono\poligono.h
+1506116749 c:\users\alax\desktop\poligono\poligono.h
 	"point.h"
 
 1506040197 c:\users\alax\desktop\poligono\retangulo.h
 	"poligono.h"
 	"point.h"
 
-1506040506 source:c:\users\alax\desktop\poligono\retangulo.cpp
+1506111522 source:c:\users\alax\desktop\poligono\retangulo.cpp
 	"retangulo.h"
 	"poligono.h"
 	"point.h"
