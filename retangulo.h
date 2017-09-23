@@ -4,10 +4,14 @@
 #define RETANGULO_H_INCLUDED
 
 class Retangulo : public Poligono{
-    Point pRet[5];
-    float n;
+private:
+    float larg;
+    float alt;
+
 public:
     Retangulo(float x, float y, float largura, float altura);
+    float getAlt(void);
+    float getLarg(void);
     ~Retangulo();
 };
 

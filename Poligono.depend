@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1506116858 source:c:\users\alax\desktop\poligono\main.cpp
+1506136987 source:c:\users\alax\desktop\poligono\main.cpp
 	<iostream>
 	"poligono.h"
 	"point.h"
@@ -12,21 +12,55 @@
 
 1506019555 c:\users\alax\desktop\poligono\point.h
 
-1506111497 source:c:\users\alax\desktop\poligono\poligono.cpp
+1506136002 source:c:\users\alax\desktop\poligono\poligono.cpp
 	<iostream>
 	<cstdlib>
 	<cmath>
 	"poligono.h"
 	"point.h"
 
-1506116749 c:\users\alax\desktop\poligono\poligono.h
+1506162045 c:\users\alax\desktop\poligono\poligono.h
 	"point.h"
 
-1506040197 c:\users\alax\desktop\poligono\retangulo.h
+1506162045 c:\users\alax\desktop\poligono\retangulo.h
 	"poligono.h"
 	"point.h"
 
-1506111522 source:c:\users\alax\desktop\poligono\retangulo.cpp
+1506136957 source:c:\users\alax\desktop\poligono\retangulo.cpp
+	"retangulo.h"
+	"poligono.h"
+	"point.h"
+	<cstdlib>
+	<iostream>
+
+1506203927 source:c:\users\alax\desktop\poligono - copia\main.cpp
+	<iostream>
+	"poligono.h"
+	"point.h"
+	"retangulo.h"
+
+1506203927 c:\users\alax\desktop\poligono - copia\poligono.h
+	"point.h"
+
+1506019555 c:\users\alax\desktop\poligono - copia\point.h
+
+1506202844 c:\users\alax\desktop\poligono - copia\retangulo.h
+	"poligono.h"
+	"point.h"
+
+1506019555 source:c:\users\alax\desktop\poligono - copia\point.cpp
+	"point.h"
+	<iostream>
+	<cmath>
+
+1506201092 source:c:\users\alax\desktop\poligono - copia\poligono.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"poligono.h"
+	"point.h"
+
+1506202844 source:c:\users\alax\desktop\poligono - copia\retangulo.cpp
 	"retangulo.h"
 	"poligono.h"
 	"point.h"

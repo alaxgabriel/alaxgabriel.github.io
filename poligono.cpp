@@ -10,28 +10,8 @@
 
 using namespace std;
 
-/*Poligono::Poligono(float x, float y, float largura, float altura){
 
-    p[0].setX(x+largura);
-    p[0].setY(y);
-
-    p[1].setX(x+largura);
-    p[1].setY(y-altura);
-
-    p[2].setX(x);
-    p[2].setY(y-altura);
-
-    p[3].setX(x);
-    p[3].setY(y);
-
-    p[4].setX(x+largura);
-    p[4].setY(y);
-
-    n = 4;
-}*/
-
-
-void Poligono::inicia (){
+void Poligono::setN(int _n){
     int nv;
     cout << "\n Digite o numero de vertices do poligono: ";
     cin >> nv;
@@ -44,7 +24,12 @@ void Poligono::inicia (){
     n = nv;
 }
 
-void Poligono::inserirVertices(){
+int Poligono::getN (void){
+    cout << "\n Numero de vertices do poligono: " << n << endl;
+    return n;
+}
+
+void Poligono::setVertices(){
     cout << "\n Insira os " << n << " vertices do poligono: " << endl;
     float a;
     float b;
@@ -57,14 +42,27 @@ void Poligono::inserirVertices(){
     p[n].setX(p[0].getX());
     p[n].setY(p[0].getY());
     //cout << "\tV0(" << p[n].getX() << ", " << p[n].getY() << ")!!!" << endl;
+    cout << "\n\n";
 }
 
 
-int Poligono::recupera (void){
-    int a;
-    cout << "\n Numero de vertices do poligono: " << n << endl;
-    a = n;
-    return a;
+void Poligono::setRet(float x, float y, float largura, float altura){
+    p[0].setX(x);// 0 0
+    p[0].setY(y);
+
+    p[1].setX(x);// 0 -3
+    p[1].setY(y-altura);
+
+    p[2].setX(x+largura);
+    p[2].setY(y-altura);
+
+    p[3].setX(x+largura);
+    p[3].setY(y);
+
+    p[4].setX(x);
+    p[4].setY(y);
+
+    n=4;
 }
 
 float Poligono::area(void){
@@ -79,50 +77,63 @@ float Poligono::area(void){
         a = a + tmp;
         tmp = 0;
         tmp = p[i].getY()*p[i+1].getX();
-        //cout << "\ttmpB" << i << " = " << tmp << endl;
+        //cout << "\t" << "tmpB" << i << " = " << tmp << endl;
         b = b + tmp;
     }
 
-    if(b<0){
-        b = b * -1;
-    }
     //cout << "\n a = " << a << "\t b = " << b << endl;
-    if(a > b){
-        area = (a - b)/2;
+
+    if(a>0 && b>0){
+        if(a>b){
+            area = (a-b)/2;
+        }
+        else{
+            area = (b-a)/2;
+        }
+    }
+    else if(a<=0 || b<=0){
+        if(a<=0 && b<=0){
+            area = (a-b)/2;
+        }
+        else if(a<=0 && b>=0){
+            area = (b-a)/2;
+        }
+        else if(a>=0 && b<=0){
+            area = (a-b)/2;
+        }
     }
     else{
-        area = (b - a)/2;
+        area = (a-b)/2;
+    }
+
+    if(area<0){
+        area = area * -1;
     }
     cout << "\n Area do poligono: " << area << endl;
+    cout << endl;
+    cout << "---------------------------------------" << endl;
+    cout << endl;
+    system("PAUSE");
+    cout << endl;
     return area;
 }
 
 void Poligono::translada(float a, float b){
-    cout << "\n\n Translacao:\n";
+    cout << "\n\n \t\t TRANSLACAO\n";
     for(int i=0; i<n; i++){
         p[i].setX(p[i].getX()+a);
         p[i].setY(p[i].getY()+b);
     }
     p[n].setX(p[n].getX() + a);
     p[n].setY(p[n].getY() + b);
+    cout << endl;
+    system("PAUSE");
+    cout << endl;
 }
 
 void Poligono::rotaciona(float ang, Point pRot){
-    /*float a;
-    float b;
-    //float r;
-    cout << "\n Informe o ponto de rotacao para o poligono: ";
-    cin >> a >> b;
-    pRot.setXY(a, b);
-    cout << "\n Informe o angulo da rotacao: ";
-    cin >> ang;
-    while(ang < 0 || ang > 360){
-        cout << "\n O angulo deve ser entre 0 e 360 graus!! \n\n Informe o angulo de rotacao: ";
-        cin >> ang;
-    }*/
-    cout << "\n\n Rotacao:\n";
+    cout << "\n\n \t\t ROTACAO\n";
     for(int i=0; i<n; i++){
-        //r = sqrt( ( pow( ( p[i].getX() - p[i].getX() ), 2) ) + ( pow( ( p[i].getY() - p[i].getY()/2 ), 2) ) );
         float x;
         float y;
         x = p[i].getX();
@@ -132,13 +143,20 @@ void Poligono::rotaciona(float ang, Point pRot){
     }
     p[n].setX(p[0].getX());
     p[n].setY(p[0].getY());
-
+    cout << endl;
+    system("PAUSE");
+    cout << endl;
 }
 
 void Poligono::imprime (){
     cout << endl;
+    cout << "\n Poligono: ";
     for(int i=0; i<n; i++){
         cout << " V" << i << "(" << p[i].getX() << ", " << p[i].getY() << ")->";
     }
     cout << " V0(" << p[n].getX() << ", " << p[n].getY() << ")" << endl;
+    cout << endl;
+    cout << endl;
+    system("PAUSE");
+    cout << endl;
 }

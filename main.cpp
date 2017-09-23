@@ -7,43 +7,45 @@ using namespace std;
 
 int main()
 {
-    Point pRot;
-    pRot.setXY(0,0);
-    Poligono pol;
-    pol.inicia();
-    pol.inserirVertices();
-    pol.imprime();
-    //pol.recupera();
-    pol.area();
-    //pol.translada(1,1);
-    //pol.print();
-    pol.rotaciona(30, pRot);
-    pol.imprime();
-    pol.area();
-    /*Retangulo ret(0, 0, 4, 3);
-    //Retangulo ret(0, 0, 5, 5);
-    ret.imprime();
     float a1;
     float a2;
     float a3;
+
+    Retangulo ret(0,0,4,3);
+
+    ret.imprime();
+
     a1 = ret.area();
-    //ret.translada(-3, 4);
-    //ret.imprime();
+
+    ret.translada(-3,4);
+    ret.imprime();
     a2 = ret.area();
+
     if(a1 == a2){
-        cout << "\n Area permaneceu a mesma apos o translado!" << endl;
+        cout << "\n A area 1 = " << a1 << "; e a area 2 = " << a2 << endl;
+        cout << " Logo, a area permaneceu a mesma!" << endl;
     }
     else{
-        cout << "\n Algo deu errado! A area do retangulo mudou apos o translado!!" << endl;
+        cout << "\n A area 1 = " << a1 << "; e a area 2 = " << a2 << endl;
+        cout << "\n Algo deu errado. A area do poligono mudou!" << endl;
     }
-    ret.rotaciona();
+
+    Point pr1;
+    pr1.setXY(ret.getLarg()/2, ret.getAlt()/2);
+
+    ret.rotaciona(30, pr1);
+    cout << "Ponto de rotacao: (" << ret.getLarg()/2 << ", " << ret.getAlt()/2 << ")" << endl;
     ret.imprime();
     a3 = ret.area();
-    if(a1 == a3){
-        cout << "\n Area permaneceu a mesma apos a rotacao!" << endl;
+
+    if(a3 - a2 >= 0){
+        cout << "\n A area 3 = " << a3 << "; e a area 2 = " << a2 << endl;
+        cout << " Logo, a area permaneceu a mesma!" << endl;
     }
-    else{
-        cout << "\n Algo deu errado! A area do retangulo mudou apos a rotacao!!" << endl;
-    }*/
+    else {
+        cout << "\n A area 3 = " << a3 << "; e a area 2 = " << a2 << endl;
+        cout << "\n Algo deu errado. A area do poligono mudou!" << endl;
+    }
+
     return 0;
 }

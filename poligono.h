@@ -6,11 +6,12 @@ class Poligono{
 private:
     int n;
     Point p[101];
+
 public:
-    //Poligono(float x, float y, float largura, float altura);
-    void inicia(void);
-    void inserirVertices(void);
-    int recupera(void);
+    void setN(int _n);
+    int getN(void);
+    void setVertices(void);
+    void setRet(float x, float y, float largura, float altura);
     float area(void);
     void translada(float a, float b);
     void rotaciona(float ang, Point pRot);
