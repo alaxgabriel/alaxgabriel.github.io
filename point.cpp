@@ -4,7 +4,7 @@
 
 using namespace std;
 
-/** brief Insere coordenada x */
+/** \brief Insere coordenada x */
 void Point::setX(float _x){
     /**
         \details Insere coordenada x do ponto
@@ -13,7 +13,7 @@ void Point::setX(float _x){
     x = _x;
 }
 
-/** brief INsere coordenada y */
+/** \brief INsere coordenada y */
 void Point::setY(float _y){
     /**
         \details Insere coordenada y do ponto
@@ -22,7 +22,7 @@ void Point::setY(float _y){
     y = _y;
 }
 
-/** brief Insere as coordenadas do ponto */
+/** \brief Insere as coordenadas do ponto */
 void Point::setXY(float _x, float _y){
     /**
         \details Insere as coordenadas x e y do ponto
@@ -33,7 +33,7 @@ void Point::setXY(float _x, float _y){
     y = _y;
 }
 
-/** brief Recupera coordenada x */
+/** \brief Recupera coordenada x */
 float Point::getX(void){
     /**
         \details Recupera a coordenada x do ponto
@@ -42,7 +42,7 @@ float Point::getX(void){
     return x;
 }
 
-/** brief Recupera coordenada y */
+/** \brief Recupera coordenada y */
 float Point::getY(void){
   /**
         \details Recupera a coordenada y do ponto
@@ -51,12 +51,12 @@ float Point::getY(void){
     return y;
 }
 
-/** brief Imprime poligono */
+/** \brief Soma pontos */
 Point Point::add(Point p1){
     /**
-        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
-        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
-        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+        \details Soma o ponto inicializado, ao ponto p1 passado
+        \param p1 Objeto da classe ponto que será somado ao ponto inicializado
+        \return Retorna um objeto do tipo ponto, resultado da soma dos pontos
      */
     Point ret;
     ret.x = x + p1.x;
@@ -65,12 +65,12 @@ Point Point::add(Point p1){
     return ret;
 }
 
-/** brief Imprime poligono */
+/** \brief Subtrai pontos */
 Point Point::sub(Point p1){
     /**
-        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
-        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
-        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+        \details Subtrai o ponto inicializado, ao ponto p1 passado
+        \param p1 Objeto da classe ponto que será subtraido ao ponto inicializado
+        \return Retorna um objeto do tipo ponto, resultado da subtracao dos pontos
      */
     Point ret;
     ret.x = x - p1.x;
@@ -79,35 +79,32 @@ Point Point::sub(Point p1){
     return ret;
 }
 
-/** brief Imprime poligono */
+/** \brief Calcula a norma */
 float Point::norma(){
     /**
-        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
-        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
-        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+        \details Calcula a norma do ponto
+        \return Retorna valor do tipo float da norma do ponto
      */
     return (sqrt(x*x+y*y));
 
 }
 
-/** brief Imprime poligono */
+/** \brief Translada */
 void Point::translada(float a, float b){
     /**
-        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
-        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
-        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+        \details Transalada o ponto somando a e b as coordenadas x e y, respectivamente
+        \param a Valor do tipo float que sera somada a coordenada x do ponto
+        \param b Valor do tipo float que sera somada a coordenada y do ponto
      */
     x = x+a;
     y = y+b;
 
 }
 
-/** brief Imprime poligono */
+/** \brief Imprime ponto */
 void Point::imprime(){
     /**
-        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
-        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
-        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+        \details Imprime as coordenadas x e y do ponto
      */
     cout << "(" << getX() << ", " << getY() << ")" << endl;
 }
