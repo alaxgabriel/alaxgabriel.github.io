@@ -15,28 +15,32 @@ using namespace std;
 
 int main()
 {
-    /** Recebe a area do poligono inicializado */
     float a1;
-    /** Recebe a area do poligono apos a translacao */
+    /** Recebe a area do poligono inicializado. */
+
     float a2;
-    /** Recebe a area do poligono apos rotacao */
+    /** Recebe a area do poligono apos a translacao. */
+
     float a3;
+    /** Recebe a area do poligono apos rotacao. */
 
-    /** Implementacao do retangulo com vertive (0,0), largura 4 e altura 3 */
     Retangulo ret(0,0,4,3);
+    /** ret Implementacao do retangulo com vertive (0,0), largura 4 e altura 3. */
 
-    /** imprime o poligono ret */
     ret.imprime();
+    /** ret.imprime imprime o poligono ret. */
 
-    /** a1 recebe o valor da area do poligono */
     a1 = ret.area();
+    /** a1 recebe o valor da area do poligono. */
 
-    /** Translada o poligono ret com -3 em x e 4 em y */
     ret.translada(-3,4);
+    /** ret.translada Translada o poligono ret com -3 em x e 4 em y. */
     ret.imprime();
-    /** a1 recebe o valor da area do poligono apos translacao */
+
+    /** a2 recebe o valor da area do poligono apos translacao. */
     a2 = ret.area();
-    /** Compara o valor das areas antes e apos a translacao*/
+
+    /** Compara o valor das areas antes e apos a translacao. */
     if(a1 == a2){
         cout << "\n A area 1 = " << a1 << "; e a area 2 = " << a2 << endl;
         cout << " Logo, a area permaneceu a mesma!" << endl;
