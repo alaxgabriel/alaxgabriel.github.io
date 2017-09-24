@@ -10,7 +10,7 @@
 
 using namespace std;
 
-/** brief Insere o numero de vertices */
+/** \brief Insere o numero de vertices */
 void Poligono::setN(int _n){
     /**
         \details Insere o numero de vertices do poligono
@@ -28,7 +28,7 @@ void Poligono::setN(int _n){
     n = nv;
 }
 
-/** brief Insere o numero de vertices */
+/** \brief Insere o numero de vertices */
 int Poligono::getN (void){
     /**
         \details Recupera o numero de vertices do poligono
@@ -39,7 +39,7 @@ int Poligono::getN (void){
 }
 
 
-/** brief Insere os vertices */
+/** \brief Insere os vertices */
 void Poligono::setVertices(){
     /**
         \details Insere os n vertices do poligono
@@ -59,7 +59,7 @@ void Poligono::setVertices(){
 }
 
 
-/** brief Insere os vertices do retangulo */
+/** \brief Insere os vertices do retangulo */
 void Poligono::setRet(float x, float y, float largura, float altura){
     /**
         \details Insere os 4 vertices do objeto da classe retangulo, herdeira da classe poligono.
@@ -86,7 +86,7 @@ void Poligono::setRet(float x, float y, float largura, float altura){
     n=4;
 }
 
-/** brief Calcula area */
+/** \brief Calcula area */
 float Poligono::area(void){
     /**
         \details Calcula a area do poligono
@@ -139,7 +139,7 @@ float Poligono::area(void){
     return area;
 }
 
-/** brief Translada poligono */
+/** \brief Translada poligono */
 void Poligono::translada(float a, float b){
     /**
         \details Translada o poligono somando a e b nas cordenadas x e y, respectivamente
@@ -158,7 +158,7 @@ void Poligono::translada(float a, float b){
     cout << endl;
 }
 
-/** brief Rotaciona poligono */
+/** \brief Rotaciona poligono */
 void Poligono::rotaciona(float ang, Point pRot){
     /**
         \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
@@ -181,7 +181,7 @@ void Poligono::rotaciona(float ang, Point pRot){
     cout << endl;
 }
 
-/** brief Imprime poligono */
+/** \brief Imprime poligono */
 void Poligono::imprime (){
     /**
         \details Imprime os vertices do poligono no sentido anti-horario

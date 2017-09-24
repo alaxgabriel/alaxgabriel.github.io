@@ -3,10 +3,10 @@
 
 class Point{
 private:
-    float x;
-    float y;
+    float x;  // Coordenada x do ponto
+    float y;  // Coordenada y do ponto
 public:
-
+    // Cabecalho dos metodos do poligono
     void setX(float _x);
     void setY(float _y);
     void setXY(float _x, float _y);

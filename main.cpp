@@ -49,15 +49,20 @@ int main()
         cout << "\n A area 1 = " << a1 << "; e a area 2 = " << a2 << endl;
         cout << "\n Algo deu errado. A area do poligono mudou!" << endl;
     }
+
     /** Inicializa o ponto pr1 */
     Point pr1;
     /** pr1 sera o ponto de rotacao do poligono. A coordenada x do ponto pr1 será a metade da largura do retangulo; enquanto a coordenada
     y de pr1 sera a metade da altura do retangulo ret */
     pr1.setXY(ret.getLarg()/2, ret.getAlt()/2);
+
     /** Rotacao do retangulo ret */
     ret.rotaciona(30, pr1);
+
     cout << "Ponto de rotacao: (" << ret.getLarg()/2 << ", " << ret.getAlt()/2 << ")" << endl;
+
     ret.imprime();
+
     /** a3 recebe o valor da area do poligono */
     a3 = ret.area();
     /** Compara o valor das areas antes e apos a rotacao */

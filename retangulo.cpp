@@ -1,12 +1,12 @@
 #include "retangulo.h"
 #include "poligono.h"
 #include "point.h"
-#include <cstdlib>
+#include <cstdlib>  // Biblioteca padrao da linguagem
 #include <iostream>
 
 using namespace std;
 
-/** brief Construtor da classe */
+/** \brief Construtor da classe */
 Retangulo::Retangulo(float x, float y, float largura, float altura){
     /**
         \details Construtor da classe Retangulo que inicializa o objeto
@@ -19,7 +19,7 @@ Retangulo::Retangulo(float x, float y, float largura, float altura){
     alt = altura;
 };
 
-/** brief Recupera altura */
+/** \brief Recupera altura */
 float Retangulo::getAlt(){
     /**
         \details Recupera a altura do retangulo
@@ -28,7 +28,7 @@ float Retangulo::getAlt(){
     return alt;
 }
 
-/** brief Recupera a largura */
+/** \brief Recupera a largura */
 float Retangulo::getLarg(){
     /**
         \details Recupera a largura do retangulo
@@ -37,7 +37,7 @@ float Retangulo::getLarg(){
     return larg;
 }
 
-/** brief Destrutor da classe */
+/** \brief Destrutor da classe */
 Retangulo::~Retangulo(){};
 
 
