@@ -67,3 +67,31 @@
 	<cstdlib>
 	<iostream>
 
+1506215424 source:c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\point.cpp
+	"point.h"
+	<iostream>
+	<cmath>
+
+1506216342 c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\point.h
+
+1506216342 source:c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\retangulo.cpp
+	"retangulo.h"
+	"poligono.h"
+	"point.h"
+	<cstdlib>
+	<iostream>
+
+1506216342 c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\retangulo.h
+	"poligono.h"
+	"point.h"
+
+1506216342 c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\poligono.h
+	"point.h"
+
+1506257268 source:c:\users\alax\desktop\gabriel\1 - ufrn\programação avançada\projeto 1 pa\poligono\poligono.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"poligono.h"
+	"point.h"
+

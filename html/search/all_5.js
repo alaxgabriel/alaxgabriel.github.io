@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['poligono',['poligono',['../md__r_e_a_d_m_e.html',1,'']]],
   ['pi',['PI',['../poligono_8cpp.html#a598a3330b3c21701223ee0ca14316eca',1,'poligono.cpp']]],
   ['point',['Point',['../class_point.html',1,'']]],
   ['point_2ecpp',['point.cpp',['../point_8cpp.html',1,'']]],

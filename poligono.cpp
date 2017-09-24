@@ -17,11 +17,11 @@ void Poligono::setN(int _n){
         \param _n Valor do tipo inteiro que indica o numero de vertices
      */
     int nv;
-    cout << "\n Digite o numero de vertices do poligono: ";
+    cout << "\n DIGITE O NUMERO DE VERTICES DO SEU POLIGONO: ";
     cin >> nv;
     cout << endl;
     while(nv<3 || nv>100){
-        cout << "\n Seu poligono deve possuir entre 3 e 100 vertices!!! \n\n\n Por favor digite novamente o numero de vertices do seu poligono: ";
+        cout << "\n SEU POLIGONO DEVE POSSUIR ENTRE 3 e 100 VERTICES!!! \n\n\n POR FAVOR, DIGITE NOVAMENTE O NUMERO DE VERTICES DO SEU POLIGONO: ";
         cin >> nv;
         cout << endl;
     }
@@ -34,7 +34,6 @@ int Poligono::getN (void){
         \details Recupera o numero de vertices do poligono
         \return Retorna o numero de vertices do poligono
      */
-    cout << "\n Numero de vertices do poligono: " << n << endl;
     return n;
 }
 
@@ -44,7 +43,7 @@ void Poligono::setVertices(){
     /**
         \details Insere os n vertices do poligono
      */
-    cout << "\n Insira os " << n << " vertices do poligono: " << endl;
+    cout << "\n INSIRA OS  " << n << " VERTICES: " << endl;
     float a;
     float b;
     for(int i=0; i<n; i++){
@@ -130,7 +129,7 @@ float Poligono::area(void){
     if(area<0){
         area = area * -1;
     }
-    cout << "\n Area do poligono: " << area << endl;
+    cout << "\n AREA DO POLIGONO = " << area << endl;
     cout << endl;
     cout << "---------------------------------------" << endl;
     cout << endl;
@@ -147,6 +146,8 @@ void Poligono::translada(float a, float b){
         \param b Valor do tipo float que sera somado as coordanas y dos vertices do poligono
      */
     cout << "\n\n \t\t TRANSLACAO\n";
+    cout << "\n TRANSLADA " << a << " EM X;" << endl;
+    cout << " TRANSLADA " << b << " EM Y;" << endl;
     for(int i=0; i<n; i++){
         p[i].setX(p[i].getX()+a);
         p[i].setY(p[i].getY()+b);
@@ -187,9 +188,14 @@ void Poligono::imprime (){
         \details Imprime os vertices do poligono no sentido anti-horario
      */
     cout << endl;
-    cout << "\n Poligono: ";
+    if(getN()== 4){
+        cout << "\n RETANGULO: ";
+    }
+    else{
+    cout << "\n POLIGONO: ";
+    }
     for(int i=0; i<n; i++){
-        cout << " V" << i << "(" << p[i].getX() << ", " << p[i].getY() << ")->";
+        cout << " V" << i << "(" << p[i].getX() << ", " << p[i].getY() << ") ->";
     }
     cout << " V0(" << p[n].getX() << ", " << p[n].getY() << ")" << endl;
     cout << endl;
