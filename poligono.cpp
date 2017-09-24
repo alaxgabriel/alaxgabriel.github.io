@@ -10,8 +10,12 @@
 
 using namespace std;
 
-
+/** brief Insere o numero de vertices */
 void Poligono::setN(int _n){
+    /**
+        \details Insere o numero de vertices do poligono
+        \param _n Valor do tipo inteiro que indica o numero de vertices
+     */
     int nv;
     cout << "\n Digite o numero de vertices do poligono: ";
     cin >> nv;
@@ -24,12 +28,22 @@ void Poligono::setN(int _n){
     n = nv;
 }
 
+/** brief Insere o numero de vertices */
 int Poligono::getN (void){
+    /**
+        \details Recupera o numero de vertices do poligono
+        \return Retorna o numero de vertices do poligono
+     */
     cout << "\n Numero de vertices do poligono: " << n << endl;
     return n;
 }
 
+
+/** brief Insere os vertices */
 void Poligono::setVertices(){
+    /**
+        \details Insere os n vertices do poligono
+     */
     cout << "\n Insira os " << n << " vertices do poligono: " << endl;
     float a;
     float b;
@@ -41,16 +55,23 @@ void Poligono::setVertices(){
     }
     p[n].setX(p[0].getX());
     p[n].setY(p[0].getY());
-    //cout << "\tV0(" << p[n].getX() << ", " << p[n].getY() << ")!!!" << endl;
     cout << "\n\n";
 }
 
 
+/** brief Insere os vertices do retangulo */
 void Poligono::setRet(float x, float y, float largura, float altura){
-    p[0].setX(x);// 0 0
+    /**
+        \details Insere os 4 vertices do objeto da classe retangulo, herdeira da classe poligono.
+        \param x Valor do tipo float da coordenada x do vertice superior esquerdo do retangulo
+        \param y Valor do tipo float da Coordenada y do vertice superior esquerdo do retangulo
+        \param largura Valor do tipo float da largura do retangulo
+        \param altura Valor do tipo float da altura do retangulo
+     */
+    p[0].setX(x);
     p[0].setY(y);
 
-    p[1].setX(x);// 0 -3
+    p[1].setX(x);
     p[1].setY(y-altura);
 
     p[2].setX(x+largura);
@@ -65,7 +86,11 @@ void Poligono::setRet(float x, float y, float largura, float altura){
     n=4;
 }
 
+/** brief Calcula area */
 float Poligono::area(void){
+    /**
+        \details Calcula a area do poligono
+     */
     float area;
     float a = 0;
     float b = 0;
@@ -73,15 +98,11 @@ float Poligono::area(void){
     for(int i=0; i<n; i++){
         tmp = 0;
         tmp = p[i].getX()*p[i+1].getY();
-        //cout << "tmpA" << i << " = " << tmp;
         a = a + tmp;
         tmp = 0;
         tmp = p[i].getY()*p[i+1].getX();
-        //cout << "\t" << "tmpB" << i << " = " << tmp << endl;
         b = b + tmp;
     }
-
-    //cout << "\n a = " << a << "\t b = " << b << endl;
 
     if(a>0 && b>0){
         if(a>b){
@@ -118,7 +139,13 @@ float Poligono::area(void){
     return area;
 }
 
+/** brief Translada poligono */
 void Poligono::translada(float a, float b){
+    /**
+        \details Translada o poligono somando a e b nas cordenadas x e y, respectivamente
+        \param a Valor do tipo float que sera somado as coordanas x dos vertices do poligono
+        \param b Valor do tipo float que sera somado as coordanas y dos vertices do poligono
+     */
     cout << "\n\n \t\t TRANSLACAO\n";
     for(int i=0; i<n; i++){
         p[i].setX(p[i].getX()+a);
@@ -131,7 +158,13 @@ void Poligono::translada(float a, float b){
     cout << endl;
 }
 
+/** brief Rotaciona poligono */
 void Poligono::rotaciona(float ang, Point pRot){
+    /**
+        \details Rotaciona o poligono num angulo ang em relacao a um ponto pRot
+        \param ang Valor do tipo float que indica o angulo em que o poligono sera rotacionado
+        \param pRot Objeto da classe Point que indica o ponto de referencia para a rotacao do poligono
+     */
     cout << "\n\n \t\t ROTACAO\n";
     for(int i=0; i<n; i++){
         float x;
@@ -148,7 +181,11 @@ void Poligono::rotaciona(float ang, Point pRot){
     cout << endl;
 }
 
+/** brief Imprime poligono */
 void Poligono::imprime (){
+    /**
+        \details Imprime os vertices do poligono no sentido anti-horario
+     */
     cout << endl;
     cout << "\n Poligono: ";
     for(int i=0; i<n; i++){
