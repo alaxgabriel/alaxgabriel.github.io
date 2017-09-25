@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tratamento de Polígonos: Referência do Arquivo main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Foto 3x4.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tratamento de Polígonos
+   &#160;<span id="projectnumber">0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &quot;<a class="el" href="poligono_8h_source.html">poligono.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="point_8h_source.html">point.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="retangulo_8h_source.html">retangulo.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>a1 Recebe a area do poligono inicializado.</p>
+<p>a2 Recebe a area do poligono apos a translacao.</p>
+<p>a3 Recebe a area do poligono apos rotacao.</p>
+<p>ret Implementacao do retangulo com vertice (0,0), largura 4 e altura 3.</p>
+<p>ret.imprime imprime o poligono ret.</p>
+<p>a1 recebe o valor da area do poligono.</p>
+<p>ret.translada Translada o poligono ret com -3 em x e 4 em y.</p>
+<p>a2 recebe o valor da area do poligono apos translacao.</p>
+<p>Compara o valor das areas antes e apos a translacao.</p>
+<p>Inicializa o ponto pr1 </p><pre class="fragment">pr1 sera o ponto de rotacao do poligono. A coordenada x do ponto pr1 sera a metade da largura do retangulo; enquanto a coordenada
+</pre><p> y de pr1 sera a metade da altura do retangulo ret</p>
+<p>ang1 Sera o angulo de rotacao em graus.</p>
+<p>ret.rotaciona(ang, pr1) Rotacao do retangulo ret</p>
+<p>a3 recebe o valor da area do poligono</p>
+<p>Compara o valor das areas antes e apos a rotacao </p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">float</span> a1;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> a2;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> a3;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_retangulo.html">Retangulo</a> ret(0,0,4,3);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ret.imprime();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    a1 = ret.area();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ret.translada(-3,4);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ret.imprime();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    a2 = ret.area();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(a1 == a2){</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n A AREA 1 = &quot;</span> &lt;&lt; a1 &lt;&lt; <span class="stringliteral">&quot;; E A AREA 2 = &quot;</span> &lt;&lt; a2 &lt;&lt; endl;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot; LOGO, A AREA PERMANECEU A MESMA!&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span>{</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n A AREA 1 = &quot;</span> &lt;&lt; a1 &lt;&lt; <span class="stringliteral">&quot;; E A AREA 2 = &quot;</span> &lt;&lt; a2 &lt;&lt; endl;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n ALGO DEU ERRADO. A AREA DO POLIGONO MUDOU!&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_point.html">Point</a> pr1;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    pr1.<a class="code" href="class_point.html#ab5385c6d9bfa841e641e4709fc9f14cc">setXY</a>(ret.getLarg()/2, ret.getAlt()/2);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> ang1;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ang1 = 30;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ret.rotaciona(ang1, pr1);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;PONTO DE ROTACAO: (&quot;</span> &lt;&lt; ret.getLarg()/2 &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; ret.getAlt()/2 &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;ANGULO DE ROTACAO: &quot;</span> &lt;&lt; ang1 &lt;&lt; <span class="stringliteral">&quot; GRAUS&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ret.imprime();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    a3 = ret.area();</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span>(a3 - a2 &gt;= 0){</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n A AREA 1 = &quot;</span> &lt;&lt; a3 &lt;&lt; <span class="stringliteral">&quot;; E A AREA 2 = &quot;</span> &lt;&lt; a2 &lt;&lt; endl;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot; LOGO, A AREA PERMANECEU A MESMA!&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n A AREA 1 = &quot;</span> &lt;&lt; a3 &lt;&lt; <span class="stringliteral">&quot;; E A AREA 2 = &quot;</span> &lt;&lt; a2 &lt;&lt; endl;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n ALGO DEU ERRADO. A AREA DO POLIGONO MUDOU!&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="class_point_html_ab5385c6d9bfa841e641e4709fc9f14cc"><div class="ttname"><a href="class_point.html#ab5385c6d9bfa841e641e4709fc9f14cc">Point::setXY</a></div><div class="ttdeci">void setXY(float _x, float _y)</div><div class="ttdoc">Insere as coordenadas do ponto. </div><div class="ttdef"><b>Definition:</b> point.cpp:26</div></div>
+<div class="ttc" id="class_retangulo_html"><div class="ttname"><a href="class_retangulo.html">Retangulo</a></div><div class="ttdef"><b>Definition:</b> retangulo.h:6</div></div>
+<div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> point.h:4</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
